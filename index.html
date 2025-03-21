@@ -4,39 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Google Site Verification Meta Tag -->
+    <!-- Google Site Verification -->
     <meta name="google-site-verification" content="aBX15_MHR3D_huekKw0J04tH_I_-VPmkOmf7GSh9Dv0" />
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Find the day of the week for any date using this simple Day Finder tool!" />
-    <meta name="keywords" content="Day Finder, find day of the week, date to day calculator, weekday calculator, online day finder" />
+    <meta name="description" content="Find the day of the week for any date instantly with our Day Finder and Weekday Analyzer tool. Accurate and fast!" />
+    <meta name="keywords" content="Day Finder, Weekday Analyzer, find day of the week, date to day calculator, weekday calculator, day calculator, online day finder" />
     <meta name="author" content="Pratyush" />
-    
-    <!-- Open Graph Meta Tags (for better sharing on social media) -->
-    <meta property="og:title" content="Day Finder - Find the Day for Any Date">
-    <meta property="og:description" content="Easily find the day of the week for any date with this simple tool.">
-    <meta property="og:url" content="https://pratyush-35.github.io/">
+
+    <!-- Canonical Tag (Avoids Duplicate Content Issues) -->
+    <link rel="canonical" href="https://pratyush-35.github.io/DayFinder/" />
+
+    <!-- Open Graph Meta Tags (for Social Media Sharing) -->
+    <meta property="og:title" content="Day Finder & Weekday Analyzer - Find the Day for Any Date">
+    <meta property="og:description" content="Instantly find the day of the week for any date with our Day Finder tool. Easy to use and accurate!">
+    <meta property="og:url" content="https://pratyush-35.github.io/DayFinder/">
     <meta property="og:type" content="website">
-    
-    <title>Day Finder - Find the Day for Any Date</title>
+    <meta property="og:image" content="https://pratyush-35.github.io/DayFinder/thumbnail.png">
+
+    <!-- Schema Markup (SEO Boost) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Day Finder & Weekday Analyzer",
+        "url": "https://pratyush-35.github.io/DayFinder/",
+        "description": "Find the day of the week for any date using this simple and accurate Day Finder tool."
+    }
+    </script>
+
+    <title>Day Finder & Weekday Analyzer - Find Any Date's Day</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Find the Day of a Date</h1>
-    
+    <h1>Day Finder & Weekday Analyzer</h1>
+    <h2>Find the Day of the Week for Any Date</h2>
+
     <label for="day">Day:</label>
-    <input type="number" id="day" min="1" max="31">
+    <input type="number" id="day" min="1" max="31" placeholder="DD">
     
     <label for="month">Month:</label>
-    <input type="number" id="month" min="1" max="12">
+    <input type="number" id="month" min="1" max="12" placeholder="MM">
     
     <label for="year">Year:</label>
-    <input type="number" id="year" min="1000" max="9999">
+    <input type="number" id="year" min="1000" max="9999" placeholder="YYYY">
 
     <button onclick="calculateDay()">Find Day</button>
-    
+
+    <h3>Result:</h3>
     <p id="result"></p>
 
-    <script src="script.js"></script>
+    <!-- JavaScript (Optimized for Faster Loading) -->
+    <script async src="script.js"></script>
 </body>
 </html>
