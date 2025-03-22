@@ -27,6 +27,10 @@ function calculateDay() {
         return;
     }
 
+    // Get current date for comparison
+    let today = new Date();
+    let inputDate = new Date(year, month - 1, day);
+    
     let lastTwoDigits = year % 100;
     let quotient = Math.floor(lastTwoDigits / 4);
     let centuryCode = getCenturyCode(year);
@@ -36,6 +40,17 @@ function calculateDay() {
     let remainder = total % 7;
 
     let dayNames = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+    let dayOfWeek = dayNames[remainder];
 
-    document.getElementById("result").innerText = `The day was: ${dayNames[remainder]}`;
+    // Determine tense (past, present, future)
+    let resultText;
+    if (inputDate.toDateString() === today.toDateString()) {
+        resultText = `The day is: ${dayOfWeek}`;
+    } else if (inputDate < today) {
+        resultText = `The day was: ${dayOfWeek}`;
+    } else {
+        resultText = `The day will be: ${dayOfWeek}`;
+    }
+
+    document.getElementById("result").innerText = resultText;
 }
